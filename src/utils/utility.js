@@ -1,7 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 
-let _mFile = "E:/A-Drive/GRAPHQL/api_graph/src/schema";
+let _mFile = path.dirname(__dirname);
 
 console.log(_mFile);
 
@@ -35,7 +35,7 @@ module.exports = {
 
     find(object = {}, from = "") {
         return new Promise((resolve, reject) => {
-            fs.readFile(_mFile+'/collections/'+from+'.json', 'utf8', function(err, content) {
+            fs.readFile(_mFile+'/schema/collections/'+from+'.json', 'utf8', function(err, content) {
                 if (err) {
                     // callback(err, content);
                     reject(err);

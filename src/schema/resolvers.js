@@ -13,28 +13,16 @@ const resolvers = {
 		getStudent: async function(parent, args) {
 			let db = await util.find({}, 'users');
 			let i = 0;
-			let result = {}
+			let result = {};
 			
 			while (i < db.length) {
 				if (db[i]._id == args._id) {
 					result = {};
 					result = Object.assign({}, db[i]);
 					break;
-				} else {
-					// throw new Error('DataNotFoundException');
-					result = {
-						error: {
-							code: 404,
-							message: 'Invalid user ID! Please insert correct ID'
-						}
-					}
-				}
-
+				} 
 				i++;
 			}
-
-			console.log(result);
-
 			return result;
 		}
 	},
