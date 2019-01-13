@@ -1,0 +1,25 @@
+{
+  "name": "api_graph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.3.1",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.3",
+    "http": "0.0.0",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-node6": "^11.0.0",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}
